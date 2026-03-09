@@ -74,28 +74,6 @@ if ('IntersectionObserver' in window) {
   fadeEls.forEach(el => el.classList.add('visible'));
 }
 
-/* ---------- Waitlist form ---------- */
-const waitlistForm = document.getElementById('waitlist-form');
-const waitlistSuccess = document.getElementById('waitlist-success');
-
-if (waitlistForm && waitlistSuccess) {
-  waitlistForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const email = waitlistForm.querySelector('input[type="email"]').value.trim();
-    if (!email) return;
-
-    // Simulate submission (replace with real API call)
-    const btn = waitlistForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Joining…';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      waitlistForm.style.display = 'none';
-      waitlistSuccess.classList.add('show');
-    }, 800);
-  });
-}
-
 /* ---------- Animated counter for hero stats ---------- */
 const animateCounter = (el, target, duration) => {
   let start = 0;
