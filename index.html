@@ -672,30 +672,48 @@
   <div class="container">
     <div class="waitlist-box">
       <div class="section-label fade-in">Early Access</div>
-      <h2 class="section-title fade-in">Join the AI Builder Arena Beta</h2>
+      <h2 class="section-title fade-in">Get Early Access — It's Free</h2>
       <p class="section-sub fade-in">
-        Be among the first developers to train for the AI-driven future of software
-        development. Secure your spot and unlock founding-member perks.
+        Join 12,000+ developers already on the list. Be the first to access challenges,
+        earn founding-member perks, and shape the platform from day one.
       </p>
 
+      <!-- Hidden iframe so Mailchimp form submits without leaving the page -->
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Form submission target"></iframe>
+
       <form
-  action="https://gmail.us18.list-manage.com/subscribe/post?u=b5f253b92d1f0813029722b87&id=b3de575d33"
-  method="post"
-  target="_blank"
-  class="waitlist-form fade-in"
->
-        <input
-          type="email"
-          name="EMAIL"
-          class="waitlist-input"
-          placeholder="your@email.com"
-          required
-          autocomplete="email"
-          aria-label="Email address"
-        />
-        <button type="submit" class="btn btn-primary btn-lg">
-          Get Early Access
+        action="https://gmail.us18.list-manage.com/subscribe/post?u=b5f253b92d1f0813029722b87&id=b3de575d33"
+        method="post"
+        target="hidden_iframe"
+        class="waitlist-form fade-in"
+        id="waitlist-form"
+      >
+        <div class="waitlist-inputs">
+          <input
+            type="text"
+            name="FNAME"
+            class="waitlist-input"
+            placeholder="First name"
+            autocomplete="given-name"
+            aria-label="First name"
+          />
+          <input
+            type="email"
+            name="EMAIL"
+            class="waitlist-input"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+            aria-label="Email address"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg waitlist-submit">
+          Get Early Access →
         </button>
+        <!-- Mailchimp bot-detection honeypot — do not remove -->
+        <div aria-hidden="true" style="position:absolute;left:-5000px;">
+          <input type="text" name="b_b5f253b92d1f0813029722b87_b3de575d33" tabindex="-1" value="">
+        </div>
       </form>
 
       <div class="waitlist-success" id="waitlist-success" role="status" aria-live="polite">
@@ -760,7 +778,7 @@
 
     <div class="footer-bottom">
       <p class="footer-bottom-text">
-        © 2025 AI Builder Arena. All rights reserved.
+        © 2026 AI Builder Arena. All rights reserved.
       </p>
 
       <div class="social-links" aria-label="Social media links">
