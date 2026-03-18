@@ -123,3 +123,17 @@ document.querySelectorAll('.challenge-card').forEach(card => {
     setTimeout(() => { card.style.transform = ''; }, 150);
   });
 });
+
+/* ---------- Waitlist form: Mailchimp integration ---------- */
+const waitlistForm = document.getElementById('waitlist-form');
+const waitlistSuccess = document.getElementById('waitlist-success');
+
+if (waitlistForm && waitlistSuccess) {
+  waitlistForm.addEventListener('submit', () => {
+    // Give Mailchimp a moment to receive the POST, then show success UI
+    setTimeout(() => {
+      waitlistForm.style.display = 'none';
+      waitlistSuccess.classList.add('show');
+    }, 600);
+  });
+}
