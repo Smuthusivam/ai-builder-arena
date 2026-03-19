@@ -1,0 +1,18 @@
+Cloudflare DNS Records for aibuilderarena.tech
+================================================
+
+RECORDS TO DELETE:
+- A    *               75.2.103.23   (wildcard - delete this)
+- A    aibuilderarena  75.2.103.23   (delete this)
+- A    www             75.2.103.23   (delete this)
+
+RECORDS TO ADD (all set to DNS only / grey cloud):
+--------------------------------------------------
+Type   Name   Content            Proxy
+A      @      185.199.108.153    DNS only
+A      @      185.199.109.153    DNS only
+A      @      185.199.110.153    DNS only
+A      @      185.199.111.153    DNS only
+CNAME  www    smuthusivam.github.io   DNS only
+
+NOTE: After saving, go to GitHub Pages settings and re-verify the custom domain.
