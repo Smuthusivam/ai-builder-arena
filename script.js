@@ -140,13 +140,13 @@ if (waitlistForm && waitlistSuccess) {
     submitBtn.textContent = 'Joining…';
 
     try {
-      const body = { email };
-      if (firstName) body.firstName = firstName;
+      const params = new URLSearchParams({ email });
+      if (firstName) params.append('firstName', firstName);
 
       const res = await fetch('https://app.loops.so/api/newsletter-form/cmmwfvg3d04lw0hxloayaigft', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
       });
 
       if (res.ok) {
