@@ -143,22 +143,19 @@ if (waitlistForm && waitlistSuccess) {
       const params = new URLSearchParams({ email });
       if (firstName) params.append('firstName', firstName);
 
-      const res = await fetch('https://app.loops.so/api/newsletter-form/cmmwfvg3d04lw0hxloayaigft', {
+      await fetch('https://app.loops.so/api/newsletter-form/cmmwfvg3d04lw0hxloayaigft', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params.toString(),
+        mode: 'no-cors',
       });
 
-      if (res.ok) {
-        waitlistForm.style.display = 'none';
-        waitlistSuccess.classList.add('show');
-      } else {
-        throw new Error('Request failed');
-      }
-    } catch {
+      waitlistForm.style.display = 'none';
+      waitlistSuccess.classList.add('show');
+    } catch (err) {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Get Early Access →';
-      alert('Something went wrong — please try again.');
+      alert(err.message || 'Something went wrong — please try again.');
     }
   });
 }
