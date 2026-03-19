@@ -675,20 +675,14 @@
         platform from the ground up.
       </p>
 
-      <!-- Hidden iframe so Mailchimp form submits without leaving the page -->
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Form submission target"></iframe>
-
       <form
-        action="https://gmail.us18.list-manage.com/subscribe/post?u=b5f253b92d1f0813029722b87&id=b3de575d33"
-        method="post"
-        target="hidden_iframe"
         class="waitlist-form fade-in"
         id="waitlist-form"
       >
         <div class="waitlist-inputs">
           <input
             type="text"
-            name="FNAME"
+            name="firstName"
             class="waitlist-input"
             placeholder="First name"
             autocomplete="given-name"
@@ -696,7 +690,7 @@
           />
           <input
             type="email"
-            name="EMAIL"
+            name="email"
             class="waitlist-input"
             placeholder="your@email.com"
             required
@@ -707,10 +701,6 @@
         <button type="submit" class="btn btn-primary btn-lg waitlist-submit">
           Get Early Access →
         </button>
-        <!-- Mailchimp bot-detection honeypot — do not remove -->
-        <div aria-hidden="true" style="position:absolute;left:-5000px;">
-          <input type="text" name="b_b5f253b92d1f0813029722b87_b3de575d33" tabindex="-1" value="">
-        </div>
       </form>
 
       <div class="waitlist-success" id="waitlist-success" role="status" aria-live="polite">

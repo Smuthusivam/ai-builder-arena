@@ -124,16 +124,41 @@ document.querySelectorAll('.challenge-card').forEach(card => {
   });
 });
 
-/* ---------- Waitlist form: Mailchimp integration ---------- */
+/* ---------- Waitlist form: Loops.so integration ---------- */
 const waitlistForm = document.getElementById('waitlist-form');
 const waitlistSuccess = document.getElementById('waitlist-success');
 
 if (waitlistForm && waitlistSuccess) {
-  waitlistForm.addEventListener('submit', () => {
-    // Give Mailchimp a moment to receive the POST, then show success UI
-    setTimeout(() => {
-      waitlistForm.style.display = 'none';
-      waitlistSuccess.classList.add('show');
-    }, 600);
+  waitlistForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = waitlistForm.querySelector('[name="email"]').value.trim();
+    const firstName = waitlistForm.querySelector('[name="firstName"]').value.trim();
+    const submitBtn = waitlistForm.querySelector('[type="submit"]');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Joining…';
+
+    try {
+      const body = { email };
+      if (firstName) body.firstName = firstName;
+
+      const res = await fetch('https://app.loops.so/api/newsletter-form/cmmwfvg3d04lw0hxloayaigft', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+      if (res.ok) {
+        waitlistForm.style.display = 'none';
+        waitlistSuccess.classList.add('show');
+      } else {
+        throw new Error('Request failed');
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get Early Access →';
+      alert('Something went wrong — please try again.');
+    }
   });
 }
