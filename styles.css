@@ -522,6 +522,61 @@ ul { list-style: none; }
   line-height: 1.65;
 }
 
+/* ---------- Beyond Vibe Coding ---------- */
+.vibe-coding { background: var(--bg-secondary); }
+
+.vibe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.vibe-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.vibe-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-purple));
+}
+
+.vibe-card-wide {
+  grid-column: 1 / -1;
+}
+
+.vibe-card:hover {
+  border-color: rgba(88, 166, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(88, 166, 255, 0.08);
+}
+
+.vibe-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.vibe-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.vibe-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
 /* ---------- How It Works ---------- */
 .how-it-works { background: var(--bg-primary); }
 
@@ -1268,6 +1323,8 @@ ul { list-style: none; }
   .hero-inner          { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual         { display: none; }
   .problem-grid        { grid-template-columns: 1fr; }
+  .vibe-grid           { grid-template-columns: 1fr; }
+  .vibe-card-wide      { grid-column: 1; }
   .steps               { grid-template-columns: repeat(2, 1fr); }
   .steps::before       { display: none; }
   .challenges-grid     { grid-template-columns: 1fr; }
