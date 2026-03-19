@@ -149,16 +149,21 @@ if (waitlistForm && waitlistSuccess) {
         body: params.toString(),
       });
 
-      if (res.ok) {
+      if (res.status === 429) {
+        throw new Error('Too many signups, please try again in a little while.');
+      }
+
+      const data = await res.json();
+      if (data.success) {
         waitlistForm.style.display = 'none';
         waitlistSuccess.classList.add('show');
       } else {
-        throw new Error('Request failed');
+        throw new Error(data.message || 'Something went wrong — please try again.');
       }
-    } catch {
+    } catch (err) {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Get Early Access →';
-      alert('Something went wrong — please try again.');
+      alert(err.message || 'Something went wrong — please try again.');
     }
   });
 }
