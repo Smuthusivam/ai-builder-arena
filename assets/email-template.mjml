@@ -4,12 +4,13 @@
     <mj-preview>Your spot is confirmed. Here's what's coming.</mj-preview>
     <mj-attributes>
       <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" />
+      <mj-body padding="0" />
     </mj-attributes>
   </mj-head>
 
-  <mj-body background-color="#0d1117">
+  <mj-body background-color="#0d1117" width="600px">
 
-    <mj-section background-color="#161b22" border="1px solid #30363d" border-radius="16px" padding="40px 40px 32px">
+    <mj-section background-color="#161b22" border="1px solid #30363d" border-radius="16px" padding="40px 40px 32px" css-class="main-card">
       <mj-column>
 
         <!-- Title -->
