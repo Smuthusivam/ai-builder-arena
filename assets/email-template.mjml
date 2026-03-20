@@ -1,177 +1,56 @@
 <mjml>
   <mj-head>
-    <mj-title>Welcome to AI Builder Arena</mj-title>
-    <mj-preview>Your waitlist spot is confirmed — here's what's coming.</mj-preview>
-
+    <mj-title>You're on the waitlist — AI Builder Arena</mj-title>
+    <mj-preview>Your spot is confirmed. Here's what's coming.</mj-preview>
     <mj-attributes>
       <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" />
-      <mj-text font-size="14px" color="#8b949e" line-height="1.7" />
-      <mj-section background-color="#161b22" />
     </mj-attributes>
-
-    <mj-style>
-      .feature-card { background-color:#1c2430; border:1px solid #30363d; border-radius:12px; }
-      .highlight-block { background-color:#1c2430; border:1px solid rgba(88,166,255,0.3); border-radius:12px; }
-    </mj-style>
   </mj-head>
 
   <mj-body background-color="#0d1117">
 
-    <!-- ── HEADER ── -->
-    <mj-section background-color="#161b22" border-radius="16px 16px 0 0" border="1px solid #30363d" padding="48px 40px 32px">
+    <mj-section background-color="#161b22" border="1px solid #30363d" border-radius="16px" padding="40px 40px 32px">
       <mj-column>
 
-        <!-- Logo badge -->
-        <mj-image
-          width="56px"
-          src="https://via.placeholder.com/56x56/58a6ff/0d1117?text=A"
-          border-radius="12px"
-          padding-bottom="20px"
-          align="center"
-        />
-
-        <mj-text
-          align="center"
-          font-size="12px"
-          font-weight="600"
-          letter-spacing="2px"
-          color="#58a6ff"
-          text-transform="uppercase"
-          padding-bottom="8px"
-        >
+        <!-- Title -->
+        <mj-text align="center" font-size="11px" font-weight="700" letter-spacing="2px" color="#58a6ff" text-transform="uppercase" padding-bottom="12px">
           AI Builder Arena
         </mj-text>
 
-        <mj-text
-          align="center"
-          font-size="26px"
-          font-weight="800"
-          color="#e6edf3"
-          line-height="1.2"
-          padding-bottom="12px"
-        >
+        <mj-text align="center" font-size="24px" font-weight="800" color="#e6edf3" line-height="1.2" padding-bottom="8px">
           You're in the queue. 🎉
         </mj-text>
 
-        <mj-text align="center" font-size="15px" color="#8b949e" padding-bottom="0">
-          Waitlist confirmed — we'll reach out when your spot opens.
+        <mj-text align="center" font-size="13px" color="#8b949e" padding-bottom="24px">
+          Hey <strong style="color:#e6edf3;">{{ person.firstName }}</strong> — waitlist confirmed. We'll reach out when your spot opens.
         </mj-text>
 
-      </mj-column>
-    </mj-section>
+        <mj-divider border-color="#30363d" border-width="1px" padding-bottom="20px" />
 
-    <!-- ── DIVIDER ── -->
-    <mj-section background-color="#161b22" border-left="1px solid #30363d" border-right="1px solid #30363d" padding="0">
-      <mj-column>
-        <mj-divider border-color="#30363d" border-width="1px" padding="0" />
-      </mj-column>
-    </mj-section>
+        <!-- 3 features inline -->
+        <mj-text font-size="13px" color="#8b949e" padding-bottom="4px">
+          🧠 &nbsp;<strong style="color:#e6edf3;">AI-Native Challenges</strong> — real-world sprints, not recycled LeetCode.
+        </mj-text>
+        <mj-text font-size="13px" color="#8b949e" padding-bottom="4px">
+          ⚡ &nbsp;<strong style="color:#e6edf3;">Hackathon Sprints</strong> — scored on AI collaboration &amp; output quality.
+        </mj-text>
+        <mj-text font-size="13px" color="#8b949e" padding-bottom="24px">
+          🎯 &nbsp;<strong style="color:#e6edf3;">Recruiter Marketplace</strong> — get discovered by companies that care about AI skills.
+        </mj-text>
 
-    <!-- ── GREETING ── -->
-    <mj-section background-color="#161b22" border-left="1px solid #30363d" border-right="1px solid #30363d" padding="32px 40px 8px">
-      <mj-column>
-        <mj-text font-size="15px" color="#8b949e">
-          Hey <strong style="color:#e6edf3;">{{ person.firstName }}</strong>,
-          <br /><br />
-          You just backed something we think is going to change how developers
-          prove themselves in an AI-first world. Here's a sneak peek at what's coming:
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <!-- ── FEATURE CARD 1 ── -->
-    <mj-section background-color="#1c2430" border-left="1px solid #30363d" border-right="1px solid #30363d"
-                 border-top="1px solid #30363d" border-radius="12px" padding="20px 24px" css-class="feature-card">
-      <mj-column width="48px">
-        <mj-text font-size="24px" padding="0">🧠</mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text font-size="14px" font-weight="700" color="#e6edf3" padding-bottom="4px">
-          AI-Native Challenges
-        </mj-text>
-        <mj-text font-size="13px" color="#8b949e" padding-top="0">
-          Real-world sprints designed for AI collaboration — not recycled LeetCode.
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <!-- ── FEATURE CARD 2 ── -->
-    <mj-section background-color="#1c2430" border-left="1px solid #30363d" border-right="1px solid #30363d"
-                 border-top="1px solid #30363d" border-radius="12px" padding="20px 24px">
-      <mj-column width="48px">
-        <mj-text font-size="24px" padding="0">⚡</mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text font-size="14px" font-weight="700" color="#e6edf3" padding-bottom="4px">
-          Hackathon-Style Sprints
-        </mj-text>
-        <mj-text font-size="13px" color="#8b949e" padding-top="0">
-          Scored on AI collaboration quality, speed, and real output — not just syntax.
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <!-- ── FEATURE CARD 3 ── -->
-    <mj-section background-color="#1c2430" border-left="1px solid #30363d" border-right="1px solid #30363d"
-                 border-top="1px solid #30363d" border-radius="12px" padding="20px 24px">
-      <mj-column width="48px">
-        <mj-text font-size="24px" padding="0">🎯</mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text font-size="14px" font-weight="700" color="#e6edf3" padding-bottom="4px">
-          Recruiter Marketplace
-        </mj-text>
-        <mj-text font-size="13px" color="#8b949e" padding-top="0">
-          Get discovered by companies that actually care about AI skills.
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <!-- ── QUESTION BLOCK ── -->
-    <mj-section background-color="#161b22" border-left="1px solid #30363d" border-right="1px solid #30363d" padding="24px 40px 0">
-      <mj-column background-color="#1c2430" border="1px solid rgba(88,166,255,0.3)" border-radius="12px" padding="24px">
-        <mj-text font-size="14px" font-weight="700" color="#58a6ff" padding-bottom="8px">
-          Quick question for you →
-        </mj-text>
-        <mj-text font-size="14px" color="#8b949e" padding-top="0" padding-bottom="12px">
-          What's the <strong style="color:#e6edf3;">#1 AI tool or skill</strong> you want to
-          practice most? Reply to this email — your answer shapes what we build first.
-        </mj-text>
-        <mj-text font-size="12px" color="#484f58" font-style="italic" padding-top="0">
-          Every reply gets read personally.
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <!-- ── CTA BUTTON ── -->
-    <mj-section background-color="#161b22" border-left="1px solid #30363d" border-right="1px solid #30363d" padding="32px 40px 8px">
-      <mj-column>
-        <mj-button
-          background-color="#58a6ff"
-          color="#0d1117"
-          font-size="14px"
-          font-weight="700"
-          border-radius="8px"
-          padding="14px 32px"
-          href="https://github.com/Smuthusivam/ai-builder-arena"
-        >
+        <!-- CTA -->
+        <mj-button background-color="#58a6ff" color="#0d1117" font-size="13px" font-weight="700" border-radius="8px" padding="12px 28px" href="https://github.com/Smuthusivam/ai-builder-arena" inner-padding="12px 28px">
           ★ &nbsp; Star us on GitHub
         </mj-button>
-      </mj-column>
-    </mj-section>
 
-    <!-- ── FOOTER ── -->
-    <mj-section background-color="#161b22" border="1px solid #30363d" border-radius="0 0 16px 16px" padding="24px 40px 40px">
-      <mj-column>
-        <mj-divider border-color="#30363d" border-width="1px" padding-bottom="24px" />
-        <mj-text font-size="14px" color="#8b949e">
-          See you in the arena,<br />
-          <strong style="color:#e6edf3;">The AI Builder Arena Team</strong>
-        </mj-text>
-        <mj-text font-size="12px" color="#484f58" padding-top="16px">
-          You're receiving this because you signed up at aibuilderarena.dev.<br />
+        <mj-divider border-color="#30363d" border-width="1px" padding-top="24px" padding-bottom="16px" />
+
+        <!-- Footer -->
+        <mj-text align="center" font-size="11px" color="#484f58">
+          You signed up at aibuilderarena.dev &nbsp;·&nbsp;
           <a href="{{ unsubscribeUrl }}" style="color:#8b949e; text-decoration:underline;">Unsubscribe</a>
         </mj-text>
+
       </mj-column>
     </mj-section>
 
