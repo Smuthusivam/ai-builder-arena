@@ -22,7 +22,7 @@
         </mj-text>
 
         <mj-text align="center" font-size="13px" color="#8b949e" padding-bottom="24px">
-          Hey <strong style="color:#e6edf3;">{{ person.firstName }}</strong> — waitlist confirmed. We'll reach out when your spot opens.
+          Hey <strong style="color:#e6edf3;">{firstName}</strong> — waitlist confirmed. We'll reach out when your spot opens.
         </mj-text>
 
         <mj-divider border-color="#30363d" border-width="1px" padding-bottom="20px" />
@@ -48,7 +48,7 @@
         <!-- Footer -->
         <mj-text align="center" font-size="11px" color="#484f58">
           You signed up at aibuilderarena.dev &nbsp;·&nbsp;
-          <a href="{{ unsubscribeUrl }}" style="color:#8b949e; text-decoration:underline;">Unsubscribe</a>
+          <a href="{unsubscribe_link}" style="color:#8b949e; text-decoration:underline;">Unsubscribe</a>
         </mj-text>
 
       </mj-column>
