@@ -71,7 +71,7 @@
     <mj-section background-color="#161b22" border-left="1px solid #30363d" border-right="1px solid #30363d" padding="32px 40px 8px">
       <mj-column>
         <mj-text font-size="15px" color="#8b949e">
-          Hey <strong style="color:#e6edf3;">{{firstName}}</strong>,
+          Hey <strong style="color:#e6edf3;">{{ person.firstName }}</strong>,
           <br /><br />
           You just backed something we think is going to change how developers
           prove themselves in an AI-first world. Here's a sneak peek at what's coming:
